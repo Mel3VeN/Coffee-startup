@@ -1,7 +1,8 @@
 @import "variables";
+@import "mixins";
 @import "base";
 @import "components/hero";
-@import "mixins";
+
 .header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(../images/FEND-Coffee-latte-art-3.png);
@@ -53,6 +54,73 @@
 
 .heading-section {
   font-size: 2.25rem;
+}
+
+.heading-subsection {
+  font-size: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.8rem;
+  @include respond(media-lg) {
+    margin: 0;
+  }
+}
+.location {
+  &__display {
+    margin-top: 3.75rem;
+    @include respond(media-lg) {
+      margin: 0;
+    }
+  }
+  &--heading {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.text-section {
+  font-size: 0.87rem;
+  line-height: 18px;
+}
+
+.text--kiel {
+  max-width: 500px;
+}
+
+.text--bio {
+  max-width: 400px;
+}
+
+.location__img-box {
+  align-self: flex-end;
+  @include respond(media-lg) {
+    align-self: center;
+  }
+}
+
+.location-wrapper {
+  display: flex;
+  flex-direction: column;
+  @include respond(media-lg) {
+    flex-direction: row;
+    margin-top: 7.75rem;
+    justify-content: space-around;
+  }
+}
+.origin-wrapper {
+  @include respond(media-lg) {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+  }
+}
+
+.origin__display {
+  @include respond(media-lg) {
+    align-self: center;
+  }
+}
+.origin__img-box {
+  margin-top: 2.5rem;
+  margin-bottom: 3.75rem;
 }
 
 .btn,
