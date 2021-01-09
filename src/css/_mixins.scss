@@ -1,0 +1,41 @@
+// Media Qery Manager
+
+/* 
+
+0 - 576 phone - media-sm
+576 - 768 tablet -media-md
+768 - 992 desktop - media-lg
+992 - 1200 large desktop - media-xl
+1200 - 1920 very large desktop - media-xxl
+*/
+
+@mixin media-sm {
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == media-sm {
+    @media (max-width: 576px) {
+      @content;
+    }
+  }
+  @if $breakpoint == media-md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint == media-lg {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+  @if $breakpoint == media-xl {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint == media-xxl {
+    @media (min-width: 1920px) {
+      @content;
+    }
+  }
+}

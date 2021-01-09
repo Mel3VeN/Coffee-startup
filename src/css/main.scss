@@ -1,7 +1,79 @@
 @import "variables";
 @import "base";
 @import "components/hero";
+@import "mixins";
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../images/FEND-Coffee-latte-art-3.png);
+  background-size: cover;
+  background-position: top;
+  height: 75vh;
+  position: relative;
 
-:root {
-  --div-color: red;
+  @include respond(media-lg) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url(../images/FEND-Coffee-latte-art-3-desktop.png);
+    height: 65vh;
+  }
+
+  &__logobox {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.6rem;
+  }
+
+  &__logo {
+    height: 35px;
+    width: 35px;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    overflow: auto;
+  }
+}
+
+.heading-primary {
+  font-size: 4rem;
+  color: $primary-white;
+  @include respond(media-lg) {
+    font-size: 6rem;
+  }
+}
+
+.heading-sub {
+  display: inline-block;
+  font-size: 1.1rem;
+  color: $primary-white;
+}
+
+.heading-section {
+  font-size: 2.25rem;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  padding: 15px 50px;
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.btn--dark {
+  color: $primary-white;
+  background-color: $primary-black;
+}
+
+.btn__header {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

@@ -1,21 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Index Page</title>
     <link rel="stylesheet" href="css/main.scss" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css?family=Oregano"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <header class="header">
+      <div class="header__logobox">
+        <img
+          src="images/Logo.png"
+          class="header__logo"
+          alt="Kaffeebohne in Quadrat"
+        />
+      </div>
+      <div class="header__text-box">
+        <h1 class="heading-primary">Rustica</h1>
+        <p class="heading-sub">Bio und Fair seit 1991</p>
+      </div>
+      <a href="#" class="btn btn--dark btn__header">Zum Shop</a>
+    </header>
     <main>
-      <a href="./my-subpage/index.html">Link to Subpage</a>
-      <div>Home</div>
+      <section class="firstInfo">
+        <div class="location">
+          <div class="location__display">
+            <h2 class="heading-section">Rösterei & Café</h2>
+            <p class="text-section">
+              Kaffee aus Kiel, direkt gehandelt und geröstet in der eigenen
+              Rösterei, serviert im gemütlichen Café in der Innenstadt
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
-    <script src="js/index.js"></script>
   </body>
 </html>
