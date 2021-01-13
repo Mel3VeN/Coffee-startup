@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins";
+@import "animations";
 @import "base";
 @import "components/hero";
 
@@ -61,7 +62,14 @@
   margin-top: 2.5rem;
   margin-bottom: 0.8rem;
   @include respond(media-lg) {
-    margin: 0;
+    margin-top: 0;
+  }
+}
+.locationOrigin {
+  padding-left: 5%;
+  padding-right: 5%;
+  @include respond(media-lg) {
+    padding: 0;
   }
 }
 .location {
@@ -72,21 +80,29 @@
     }
   }
   &--heading {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.26rem;
   }
 }
 
 .text-section {
   font-size: 0.87rem;
   line-height: 18px;
+  @include respond(media-lg) {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .text--kiel {
   max-width: 500px;
+  @include respond(media-lg) {
+    font-size: 18px;
+  }
 }
 
 .text--bio {
   max-width: 400px;
+  line-height: 24px;
 }
 
 .location__img-box {
@@ -123,6 +139,15 @@
   margin-bottom: 3.75rem;
 }
 
+.shop {
+  background-color: $primary-black;
+}
+
+.heading--shop {
+  color: white;
+  padding-top: 3.75rem;
+}
+
 .btn,
 .btn:link,
 .btn:visited {
@@ -132,11 +157,18 @@
   border-radius: 5px;
   font-size: 14px;
   line-height: 18px;
+  transition: all 0.2s;
 }
 
 .btn--dark {
   color: $primary-white;
   background-color: $primary-black;
+}
+.btn--light {
+  border: 1px solid $primary-white;
+  color: $primary-white;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .btn__header {
@@ -144,4 +176,21 @@
   bottom: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.subheader-m {
+  color: $primary-white;
+}
+
+.shop {
+  &--pricetext {
+    color: $grey;
+  }
+  &--view__two {
+    display: flex;
+    justify-content: space-around;
+  }
+  &--item {
+    margin-top: 2.5rem;
+  }
 }

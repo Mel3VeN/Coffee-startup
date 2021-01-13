@@ -8,26 +8,27 @@
 
 html {
   font-size: 100%;
-  @include respond(media-lg) {
-    font-size: 128%;
-  }
 }
 
 body {
   font-family: "Roboto", sans-serif;
 }
 
-main {
-  padding-left: 5%;
-  padding-right: 5%;
-  @include respond(media-lg) {
-    padding: 0;
-  }
-}
 table {
   margin-top: 1.1rem;
   margin-bottom: 1.4rem;
 }
 td:nth-child(1) {
   padding-right: 1rem;
+}
+
+.section-wrapper {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.btn--div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
