@@ -207,6 +207,7 @@
 .origin {
   &--wrapper {
     height: 50vh;
+    min-height: 300px;
     background-image: url(../images/FEND-Coffee-bags-2.jpg);
     display: flex;
     flex-direction: column;
@@ -245,5 +246,62 @@
   }
   &--icon {
     width: 5.4rem;
+  }
+}
+
+.map {
+  &--heading {
+    padding-left: 1.5rem;
+    margin-top: 4.3rem;
+    margin-bottom: 2.1rem;
+  }
+}
+
+.footer {
+  background-color: $primary-black;
+
+  &--container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  &--image {
+    margin-top: 3.8rem;
+  }
+
+  &--headingtext {
+    color: $primary-white;
+    font-weight: 900;
+    font-size: 1.5rem;
+  }
+  &--text {
+    color: $primary-white;
+    font-size: 1.1rem;
+  }
+
+  &--open {
+    color: white;
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    margin-top: 2.1rem;
+  }
+  &--nav {
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+  }
+
+  &--rights {
+    margin-top: 2.1rem;
+    padding-bottom: 2.1rem;
+  }
+  &--link {
+    color: $primary-white;
+  }
+  &--links {
+    margin-top: 2.1rem;
+    padding-right: 3rem;
+    margin-bottom: 2.1rem;
   }
 }
