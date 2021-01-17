@@ -4,6 +4,38 @@
 @import "base";
 @import "components/hero";
 
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 7% 0 2%;
+
+  &--bar {
+    display: none;
+    @include respond(media-lg) {
+      width: 30%;
+      display: block;
+    }
+  }
+  &--links {
+    display: flex;
+    justify-content: space-between;
+  }
+  &--link {
+    text-decoration: none;
+    color: $primary-white;
+    border-bottom: 1px solid white;
+  }
+  &--link:hover {
+    font-size: 1.2rem;
+  }
+  &--link:active {
+    font-weight: 900;
+  }
+}
+#nav--link__active {
+  border: none;
+}
+
 .header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(../images/FEND-Coffee-latte-art-3.png);
@@ -22,6 +54,10 @@
     position: absolute;
     top: 0.5rem;
     left: 0.6rem;
+
+    @include respond(media-lg) {
+      position: initial;
+    }
   }
 
   &__logo {
@@ -151,6 +187,9 @@
 .heading--shop {
   color: white;
   padding-top: 3.75rem;
+  @include respond(media-lg) {
+    max-width: 402px;
+  }
 }
 
 .btn,
@@ -185,6 +224,49 @@
 
 .btn--content {
   margin-top: 3rem;
+  @include respond(media-lg) {
+    margin: 0;
+  }
+}
+
+.btn--shop {
+  text-decoration: none;
+  padding: 15px 50px;
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 18px;
+  transition: all 0.8s ease;
+  border: 1px solid $primary-white;
+  color: $primary-white;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  background: opacity($color: #000000);
+}
+.btn--shop::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 0px;
+
+  border-radius: 5px;
+  position: absolute;
+
+  transform-origin: left;
+  transition-property: width;
+  transition-duration: 0.5s;
+  top: 0;
+  left: 0;
+}
+.btn--shop:hover::after {
+  width: 100%;
+  background: rgba(58, 55, 52, 0.5);
+}
+
+.btn--shop:active::after {
+  width: 100%;
+  background: rgba(215, 190, 157, 0.5);
 }
 
 .subheader-m {
@@ -192,6 +274,12 @@
 }
 
 .shop {
+  &--view {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
   &--pricetext {
     color: $grey;
   }
@@ -202,6 +290,12 @@
   &--item {
     margin-top: 2.5rem;
   }
+  &--icon {
+    @include respond(media-lg) {
+      width: 17px;
+      height: 20px;
+    }
+  }
 }
 
 .origin {
@@ -209,10 +303,16 @@
     height: 50vh;
     min-height: 300px;
     background-image: url(../images/FEND-Coffee-bags-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    @include respond(media-md) {
+      background-image: url(../images/FEND-Coffee-bags-2-desktop.jpg);
+    }
   }
   &--text {
     max-width: 80%;
@@ -220,6 +320,10 @@
     margin-top: 3%;
     color: $primary-white;
     line-height: 20px;
+    @include respond(media-lg) {
+      max-width: 306px;
+      text-align: center;
+    }
   }
   &--link {
     text-decoration: none;
@@ -238,14 +342,49 @@
   }
   &--image {
     margin-bottom: 2.6rem;
+    @include respond(media-lg) {
+      margin: 0;
+      padding-right: 100px;
+    }
   }
 
   &--iconwrapper {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    @include respond(media-lg) {
+      flex-direction: column;
+      justify-content: space-around;
+      width: 400px;
+      align-items: flex-start;
+      padding-left: 100px;
+    }
   }
   &--icon {
     width: 5.4rem;
+    @include respond(media-lg) {
+      display: flex;
+      text-align: start;
+    }
+  }
+  &--flex {
+    @include respond(media-lg) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &--text {
+    @include respond(media-lg) {
+      padding-left: 30px;
+    }
+  }
+  &--btn__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @include respond(media-lg) {
+      width: auto;
+    }
   }
 }
 
@@ -255,6 +394,8 @@
     margin-top: 4.3rem;
     margin-bottom: 2.1rem;
   }
+  &--show {
+  }
 }
 
 .footer {
@@ -263,10 +404,28 @@
   &--container {
     padding-left: 5%;
     padding-right: 5%;
+    @include respond(media-lg) {
+      display: flex;
+      padding-bottom: 5%;
+    }
+  }
+
+  &--header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    @include respond(media-lg) {
+      margin-top: 10%;
+    }
   }
 
   &--image {
     margin-top: 3.8rem;
+    @include respond(media-lg) {
+      margin: 0;
+      height: 70px;
+      width: 70px;
+    }
   }
 
   &--headingtext {
@@ -285,11 +444,23 @@
     width: 85%;
     justify-content: space-between;
     margin-top: 2.1rem;
+    @include respond(media-lg) {
+      display: block;
+      width: auto;
+      margin-top: 25%;
+    }
   }
   &--nav {
     display: flex;
     width: 85%;
     justify-content: space-between;
+    @include respond(media-lg) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      width: 30%;
+      margin-top: 9%;
+    }
   }
 
   &--rights {
@@ -299,9 +470,20 @@
   &--link {
     color: $primary-white;
   }
+
   &--links {
     margin-top: 2.1rem;
     padding-right: 3rem;
     margin-bottom: 2.1rem;
+    @include respond(media-lg) {
+      padding: 0;
+    }
+  }
+  &--desktop__container {
+    @include respond(media-lg) {
+      display: flex;
+      justify-content: space-around;
+      width: 50%;
+    }
   }
 }

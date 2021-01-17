@@ -8,6 +8,9 @@
 
 html {
   font-size: 100%;
+  @include respond(media-md) {
+    font-size: 125%;
+  }
 }
 
 body {
@@ -39,4 +42,11 @@ a {
 
 ul {
   list-style-type: none;
+}
+
+iframe {
+  display: block;
+  @include respond(media-lg) {
+    height: 484px;
+  }
 }
