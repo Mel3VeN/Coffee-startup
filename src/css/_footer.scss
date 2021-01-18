@@ -1,0 +1,89 @@
+.footer {
+  background-color: $primary-black;
+
+  &--container {
+    padding-left: 5%;
+    padding-right: 5%;
+    @include respond(media-lg) {
+      display: flex;
+      padding-bottom: 5%;
+    }
+  }
+
+  &--header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    @include respond(media-lg) {
+      margin-top: 10%;
+    }
+  }
+
+  &--image {
+    margin-top: 3.8rem;
+    @include respond(media-lg) {
+      margin: 0;
+      height: 70px;
+      width: 70px;
+    }
+  }
+
+  &--headingtext {
+    color: $primary-white;
+    font-weight: 900;
+    font-size: 1.5rem;
+  }
+  &--text {
+    color: $primary-white;
+    font-size: 1.1rem;
+  }
+
+  &--open {
+    color: white;
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    margin-top: 2.1rem;
+    @include respond(media-lg) {
+      display: block;
+      width: auto;
+      margin-top: 25%;
+    }
+  }
+  &--nav {
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    @include respond(media-lg) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      width: 30%;
+      margin-top: 9%;
+    }
+  }
+
+  &--rights {
+    margin-top: 2.1rem;
+    padding-bottom: 2.1rem;
+  }
+  &--link {
+    color: $primary-white;
+  }
+
+  &--links {
+    margin-top: 2.1rem;
+    padding-right: 3rem;
+    margin-bottom: 2.1rem;
+    @include respond(media-lg) {
+      padding: 0;
+    }
+  }
+  &--desktop__container {
+    @include respond(media-lg) {
+      display: flex;
+      justify-content: space-around;
+      width: 50%;
+    }
+  }
+}

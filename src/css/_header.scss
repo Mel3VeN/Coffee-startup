@@ -1,0 +1,38 @@
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../images/FEND-Coffee-latte-art-3.png);
+  background-size: cover;
+  background-position: top;
+  height: 75vh;
+  position: relative;
+
+  @include respond(media-lg) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url(../images/FEND-Coffee-latte-art-3-desktop.png);
+    height: 65vh;
+  }
+
+  &__logobox {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.6rem;
+
+    @include respond(media-lg) {
+      position: initial;
+    }
+  }
+
+  &__logo {
+    height: 35px;
+    width: 35px;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    overflow: auto;
+  }
+}

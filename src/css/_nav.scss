@@ -1,0 +1,32 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 7% 0 2%;
+
+  &--bar {
+    display: none;
+    @include respond(media-lg) {
+      width: 30%;
+      display: block;
+    }
+  }
+  &--links {
+    display: flex;
+    justify-content: space-between;
+  }
+  &--link {
+    text-decoration: none;
+    color: $primary-white;
+    border-bottom: 1px solid white;
+    transform: translateX(-50%, -50%);
+  }
+  &--link:hover {
+    font-size: 1.2rem;
+  }
+  &--link:active {
+    font-weight: 900;
+  }
+}
+#nav--link__active {
+  border: none;
+}
