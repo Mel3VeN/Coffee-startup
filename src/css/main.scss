@@ -8,6 +8,8 @@
 @import "footer";
 @import "nav";
 @import "header";
+@import "subheader";
+@import "image-gallery";
 
 .heading-origin {
   color: $primary-white;
@@ -128,6 +130,10 @@
   }
 }
 
+.product--highlight {
+  z-index: 2;
+  position: relative;
+}
 .origin {
   &--wrapper {
     height: 50vh;
@@ -223,7 +229,5 @@
     padding-left: 1.5rem;
     margin-top: 4.3rem;
     margin-bottom: 2.1rem;
-  }
-  &--show {
   }
 }

@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Subpage</title>
+    <title>Café</title>
     <link rel="stylesheet" href="../css/main.scss" />
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <header>
+      <include src="header_subpage.html"></include>
+    </header>
     <main>
-      <div class="hero">HERO</div>
-      <a href="/">Home</a>
+      <include src="firstInfo_subpage.html"></include>
+      <section class="image-gallery">
+        <include src="image-gallery.html"></include>
+      </section>
+      <section class="map">
+        <include src="map_subpage.html"></include>
+      </section>
     </main>
-    <script src="../js/index.js"></script>
+    <footer><include src="footer_subpage.html"></include></footer>
   </body>
 </html>

@@ -1,0 +1,16 @@
+.headerSub {
+  height: 50vh;
+
+  @include respond(media-lg) {
+    height: 65vh;
+  }
+}
+
+.header--cafe {
+  background-image: url(../images/FEND-Coffee-shop-header-desktop.jpg);
+  @include respond(media-lg) {
+    height: 65vh;
+    background-size: cover;
+    background-position: center;
+  }
+}

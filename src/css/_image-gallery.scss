@@ -1,0 +1,16 @@
+.image-gallery--container {
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  width: 345px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 3rem;
+  grid-gap: 1rem;
+}
+
+.image-gallery--column {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: space-between;
+}
