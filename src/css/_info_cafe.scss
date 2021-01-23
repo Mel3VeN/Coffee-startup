@@ -1,0 +1,11 @@
+.cafe--infotext {
+  @include respond(media-md) {
+    max-width: 600px;
+  }
+}
+
+.cafe--info-header {
+  @include respond(media-md) {
+    max-width: 349px;
+  }
+}
