@@ -152,6 +152,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+
     @include respond(media-md) {
       background-image: url(../images/FEND-Coffee-bags-2-desktop.jpg);
     }
@@ -177,7 +178,9 @@
   padding-left: 5%;
   padding-right: 5%;
   text-align: center;
-
+  &--flex {
+    margin-bottom: 4.3rem;
+  }
   &-heading {
     margin-top: 3.75rem;
     margin-bottom: 2.1rem;
@@ -233,7 +236,7 @@
 .map {
   &--heading {
     padding-left: 1.5rem;
-    margin-top: 4.3rem;
+
     margin-bottom: 2.1rem;
   }
 }

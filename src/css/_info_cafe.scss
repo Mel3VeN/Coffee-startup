@@ -5,6 +5,7 @@
 }
 
 .cafe--info-header {
+  font-weight: 900;
   @include respond(media-md) {
     max-width: 349px;
   }
