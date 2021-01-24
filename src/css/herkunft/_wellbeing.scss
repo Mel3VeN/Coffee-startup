@@ -1,4 +1,15 @@
 .wellbeing {
+  &--flex {
+    @include respond(media-lg) {
+      margin-top: 7.5rem;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-around;
+    }
+  }
+  &--text {
+    width: 32%;
+  }
   &--imgbox {
     margin-top: 3.7rem;
     margin-bottom: 3.7rem;

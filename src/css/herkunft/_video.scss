@@ -5,4 +5,10 @@
   margin-left: auto;
   margin-right: auto;
   display: block;
+
+  @include respond(media-lg) {
+    width: 1241px;
+    height: 698px;
+    margin-bottom: 7.5rem;
+  }
 }
