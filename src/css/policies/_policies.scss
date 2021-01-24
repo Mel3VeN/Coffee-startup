@@ -3,6 +3,15 @@
     margin-top: 4.8rem;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+
+    @include respond(media-md) {
+      margin-left: 20rem;
+      margin-right: 20rem;
+      margin-bottom: 7.6rem;
+    }
+  }
+  &--address {
+    margin-top: 1.5rem;
   }
   &--header {
     line-height: 2.1rem;
