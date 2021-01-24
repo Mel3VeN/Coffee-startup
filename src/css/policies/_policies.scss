@@ -1,0 +1,18 @@
+.policies {
+  &--container {
+    margin-top: 4.8rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  &--header {
+    line-height: 2.1rem;
+    font-size: 2.2rem;
+  }
+  &--header-sub {
+    font-size: 2rem;
+    margin-top: 1.2rem;
+  }
+  &--list {
+    line-height: 3rem;
+  }
+}
