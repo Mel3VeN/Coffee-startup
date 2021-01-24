@@ -1,0 +1,10 @@
+.region {
+  &--wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &--img {
+    margin-top: 3.5rem;
+    align-self: flex-end;
+  }
+}
