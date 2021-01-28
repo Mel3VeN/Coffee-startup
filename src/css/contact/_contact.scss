@@ -1,6 +1,19 @@
 .contact {
   margin-top: 2.1rem;
   margin-bottom: 2.5rem;
+  @include respond(media-lg) {
+    width: 50%;
+  }
+  &--flex {
+    @include respond(media-lg) {
+      display: flex;
+    }
+  }
+  &--header {
+    @include respond(media-lg) {
+      width: 50%;
+    }
+  }
   &--label {
     display: inline-block;
     padding-bottom: 5px;
@@ -67,7 +80,7 @@
   border: 3px solid black;
   border-radius: 5px;
   position: absolute;
-  top: 2px;
+  top: 0px;
   left: -22px;
 }
 /* Checkmark*/
@@ -81,7 +94,7 @@
   transform: rotate(-45deg);
   position: absolute;
   left: -18px;
-  top: 6px;
+  top: 4px;
 }
 
 .checkbox label {
@@ -97,4 +110,8 @@
 }
 .checkbox input[type="checkbox"]:checked + label::after {
   content: "";
+}
+
+.checkbox input[type="checkbox"]:focus + label::before {
+  outline: rgb(59, 153, 252) auto 5px;
 }

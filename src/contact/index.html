@@ -10,66 +10,77 @@
     <header></header>
     <main>
       <div class="section-wrapper">
-        <h1 class="heading-section">Du hast Fragen? Schreib uns gern!</h1>
-        <div class="contact">
-          <form action="POST">
-            <label class="contact--label" for="name">Name*</label>
-            <input
-              class="contact--input contact--name"
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Name"
-            />
-            <label class="contact--label" for="email">E-Mail*</label>
-            <input
-              class="contact--input contact--email"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="E-Mail"
-            />
-            <label class="contact--label" for="phone">Telefonnummer</label>
-            <input
-              class="contact--input contact--phone"
-              type="text"
-              name="phone"
-              id="phone"
-              placeholder="Telefonnummer"
-            />
-            <select
-              class="contact--select"
-              name="betreff"
-              id="betreff"
-              placeholder="Dein Betreff"
-            >
-              <option>Dein Betreff</option>
-              <option>Lieferung</option>
-              <option>Produkt</option>
-              <option>Vertriebsfragen</option>
-              <option>Einfach nur so!</option>
-            </select>
-            <label class="contact--label" for="nachricht"
-              >Deine Nachricht</label
-            >
-            <textarea
-              class="contact--textarea"
-              name="nachricht"
-              id="nachricht"
-              cols="30"
-              rows="10"
-              placeholder="Was hast du auf dem Herzen?"
-            ></textarea>
-
-            <div class="checkbox">
-              <input type="checkbox" name="daten" id="checkbox" />
-              <label for="checkbox"
-                >Ich akzeptiere die Datenschutzerklärung</label
+        <div class="contact--flex">
+          <h1 class="heading-section contact--header">
+            Du hast Fragen? <br />
+            Schreib uns gern!
+          </h1>
+          <div class="contact">
+            <form action="POST">
+              <label class="contact--label" for="name">Name*</label>
+              <input
+                class="contact--input contact--name"
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Name"
+              />
+              <label class="contact--label" for="email">E-Mail*</label>
+              <input
+                class="contact--input contact--email"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-Mail"
+              />
+              <label class="contact--label" for="phone">Telefonnummer</label>
+              <input
+                class="contact--input contact--phone"
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="Telefonnummer"
+              />
+              <select
+                class="contact--select"
+                name="betreff"
+                id="betreff"
+                placeholder="Dein Betreff"
               >
-            </div>
-          </form>
+                <option>Dein Betreff</option>
+                <option>Lieferung</option>
+                <option>Produkt</option>
+                <option>Vertriebsfragen</option>
+                <option>Einfach nur so!</option>
+              </select>
+              <label class="contact--label" for="nachricht"
+                >Deine Nachricht</label
+              >
+              <textarea
+                class="contact--textarea"
+                name="nachricht"
+                id="nachricht"
+                cols="30"
+                rows="10"
+                placeholder="Was hast du auf dem Herzen?"
+              ></textarea>
+
+              <div class="checkbox">
+                <input type="checkbox" name="daten" id="checkbox" />
+                <label for="checkbox"
+                  >Ich akzeptiere die Datenschutzerklärung</label
+                >
+              </div>
+              <div class="button-container">
+                <button class="btn btn--form" type="submit">abschicken</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </main>
+    <footer>
+      <include src="cafe/footer_subpage.html"></include>
+    </footer>
   </body>
 </html>
