@@ -17,11 +17,11 @@
 
 .header--herkunft {
   background-image: url(../images/FEND-Coffee-beans-hand-2.jpg);
-  @include respond(media-lg) {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include respond(media-md) {
     background-image: url(../images/FEND-Coffee-beans-hand-2-desktop.jpg);
     height: 65vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
   }
 }

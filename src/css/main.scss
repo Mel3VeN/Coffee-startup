@@ -16,6 +16,7 @@
 @import "herkunft/region";
 @import "herkunft/wellbeing";
 @import "policies/policies";
+@import "contact/contact";
 
 .heading-origin {
   color: $primary-white;
@@ -244,4 +245,10 @@
 
     margin-bottom: 2.1rem;
   }
+}
+
+.widecontainer {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
