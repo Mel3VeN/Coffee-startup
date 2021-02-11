@@ -17,16 +17,45 @@
   &--link {
     text-decoration: none;
     color: $primary-white;
-    border-bottom: 1px solid white;
-    transform: translateX(-50%, -50%);
   }
   &--link:hover {
     font-size: 1.2rem;
   }
+  &--link::after {
+    display: block;
+    content: "";
+    border-bottom: solid 1px white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  &--link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
   &--link:active {
     font-weight: 900;
+    border-bottom: solid 1px white;
   }
 }
 .nav--link__active {
   border: none !important;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+.whiteBar {
+  background-color: white;
+}
+
+.blackLinks {
+  color: black;
+}
+
+.logoDisplay {
+  display: none;
 }
