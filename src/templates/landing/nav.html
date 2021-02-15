@@ -1,28 +1,42 @@
 <nav id="navbar">
   <div class="nav">
-    <div class="header__logobox" id="logoWhite">
-      <img
-        src="images/Logo.png"
-        class="header__logo"
-        alt="Kaffeebohne in Quadrat"
-      />
-    </div>
-    <div class="header__logobox--black logoDisplay" id="logoBlack">
-      <img
-        src="images/LogoBlack.png"
-        class="header__logo"
-        alt="Kaffeebohne in Quadrat"
-      />
+    <div class="mobile--menu">
+      <div class="header__logobox" id="logoWhite">
+        <a href="index.html">
+          <img
+            src="images/Logo.png"
+            class="header__logo"
+            alt="Kaffeebohne in Quadrat"
+        /></a>
+      </div>
+      <div class="header__logobox--black logoDisplay" id="logoBlack">
+        <a href="index.html">
+          <img
+            src="images/LogoBlack.png"
+            class="header__logo"
+            alt="Kaffeebohne in Quadrat"
+        /></a>
+      </div>
+      <div class="mobile--menu-box" id="whiteBox">
+        <img src="images/burger-menu-white.png" alt="Menu" />
+      </div>
+      <div class="mobile--menu-box-black hidden" id="blackBox">
+        <img src="images/burger-menu-black.png" alt="Menu" />
+      </div>
     </div>
     <div class="nav--bar">
       <ul class="nav--links">
         <li>
-          <a class="nav--link nav--link__active" href="./my-subpage/index.html"
+          <a
+            class="nav--link nav--link__active nav--link--whiteBorder"
+            href="./my-subpage/index.html"
             >Das Café</a
           >
         </li>
-        <li><a class="nav--link" href="">Herkunft</a></li>
-        <li><a class="nav--link" href="">Shop</a></li>
+        <li>
+          <a class="nav--link nav--link--whiteBorder" href="">Herkunft</a>
+        </li>
+        <li><a class="nav--link nav--link--whiteBorder" href="">Shop</a></li>
       </ul>
     </div>
   </div>

@@ -1,7 +1,10 @@
 .nav {
   display: flex;
   justify-content: space-between;
-  padding: 2% 7% 0 2%;
+
+  @include respond(media-lg) {
+    padding: 2% 7% 0 2%;
+  }
 
   &--bar {
     display: none;
@@ -21,10 +24,18 @@
   &--link:hover {
     font-size: 1.2rem;
   }
-  &--link::after {
+  &--link--whiteBorder::after {
     display: block;
     content: "";
     border-bottom: solid 1px white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &--link--blackBorder::after {
+    display: block;
+    content: "";
+    border-bottom: solid 1px black;
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
   }
@@ -58,4 +69,31 @@ nav {
 
 .logoDisplay {
   display: none;
+}
+
+.mobile {
+  &--menu {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    @include respond(media-lg) {
+      width: auto;
+      display: block;
+      margin: 0;
+    }
+  }
+  &--menu-box {
+    @include respond(media-lg) {
+      display: none;
+    }
+  }
+  &--menu-box-black {
+    @include respond(media-lg) {
+      display: none;
+    }
+  }
 }

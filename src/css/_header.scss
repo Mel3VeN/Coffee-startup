@@ -13,10 +13,6 @@
   }
 
   &__logobox {
-    position: absolute;
-    top: 0.5rem;
-    left: 0.6rem;
-
     @include respond(media-lg) {
       position: initial;
     }
