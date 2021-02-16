@@ -1,0 +1,36 @@
+.mobilenav {
+  left: 100%;
+  transition: all 0.4s linear;
+  @include respond(media-lg) {
+    display: none;
+  }
+  &--container {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &--close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+  }
+  &--links {
+    color: white;
+    margin-right: 40%;
+  }
+  &--link {
+    padding: 1.5rem;
+    font-size: 2rem;
+  }
+  &--link a {
+    color: white;
+  }
+}
+
+.slideIn {
+  left: 0;
+}

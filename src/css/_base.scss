@@ -68,3 +68,8 @@ iframe {
 .show {
   display: block;
 }
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}

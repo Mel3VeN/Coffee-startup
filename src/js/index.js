@@ -41,6 +41,18 @@ const observer = new IntersectionObserver(function (entries) {
 }, options);
 observer.observe(target);
 // navbar mobile
-// get vw
 // show mobile nav
 // on click slide out navbar
+const body = document.querySelector("body");
+const burgerOpen = document.getElementById("whiteBox");
+const mobileNav = document.getElementById("mobileNav");
+burgerOpen.addEventListener("click", function () {
+  mobileNav.classList.add("slideIn");
+  body.classList.add("stop-scrolling");
+});
+
+const menuClose = document.getElementById("navClose");
+menuClose.addEventListener("click", function () {
+  mobileNav.classList.remove("slideIn");
+  body.classList.remove("stop-scrolling");
+});
