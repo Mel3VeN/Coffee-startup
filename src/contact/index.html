@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="../css/main.scss" />
   </head>
   <body>
-    <header></header>
+    <header>
+      <include src="nav_mobile_subpages.html"></include>
+      <include src="policies/nav_policies.html"></include>
+    </header>
     <main>
       <div class="section-wrapper">
         <div class="contact--flex">
@@ -19,7 +22,7 @@
             <form action="POST">
               <label class="contact--label" for="name">Name*</label>
               <input
-                class="contact--input contact--name"
+                class="contact--input"
                 type="text"
                 name="name"
                 id="name"
@@ -27,7 +30,7 @@
               />
               <label class="contact--label" for="email">E-Mail*</label>
               <input
-                class="contact--input contact--email"
+                class="contact--input"
                 type="email"
                 name="email"
                 id="email"
@@ -35,7 +38,7 @@
               />
               <label class="contact--label" for="phone">Telefonnummer</label>
               <input
-                class="contact--input contact--phone"
+                class="contact--input"
                 type="text"
                 name="phone"
                 id="phone"
@@ -47,13 +50,17 @@
                 id="betreff"
                 placeholder="Dein Betreff"
               >
-                <option>Dein Betreff</option>
-                <option>Lieferung</option>
-                <option>Produkt</option>
-                <option>Vertriebsfragen</option>
-                <option>Einfach nur so!</option>
+                <option value="" disabled selected hidden>Dein Betreff</option>
               </select>
-              <label class="contact--label" for="nachricht"
+              <div class="dropdown hidden">
+                <ul class="dropdown-menu">
+                  <li class="dropdown-choice">Lieferung</li>
+                  <li class="dropdown-choice">Produkt</li>
+                  <li class="dropdown-choice">Vertriebsfragen</li>
+                  <li class="dropdown-choice">Einfach nur so!</li>
+                </ul>
+              </div>
+              <label class="contact--label contact--message" for="nachricht"
                 >Deine Nachricht</label
               >
               <textarea
@@ -82,5 +89,7 @@
     <footer>
       <include src="cafe/footer_subpage.html"></include>
     </footer>
+    <script src="/js/policies.js"></script>
+    <script src="/js/form.js"></script>
   </body>
 </html>

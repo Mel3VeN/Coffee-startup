@@ -1,0 +1,43 @@
+.shoppage {
+  &--heading {
+    margin-top: 7rem;
+    margin-bottom: 1.5rem;
+    @include respond(media-lg) {
+      margin-top: 13rem;
+    }
+  }
+  &--view {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &--product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 3rem;
+  }
+  &--info {
+    align-self: flex-start;
+    margin-left: 6px;
+  }
+  &--product-header {
+    font-size: 1.1rem;
+    font-weight: normal;
+    padding-bottom: 4px;
+    padding-top: 4px;
+  }
+  &--price {
+    color: $grey;
+  }
+  &--image {
+    min-width: 155px;
+    min-height: 208px;
+    background-color: rgba(233, 233, 233);
+  }
+}
+
+svg {
+  filter: invert(100%);
+}

@@ -3,6 +3,7 @@
   margin-bottom: 2.5rem;
   @include respond(media-lg) {
     width: 50%;
+    margin-top: 20%;
   }
   &--flex {
     @include respond(media-lg) {
@@ -10,6 +11,7 @@
     }
   }
   &--header {
+    margin-top: 20%;
     @include respond(media-lg) {
       width: 50%;
     }
@@ -26,17 +28,20 @@
     border-color: black;
     margin-bottom: 2.5rem;
   }
-  &--name {
+  &--input:focus {
     background-color: $grey-light;
+    outline: none;
   }
-  &--name::placeholder {
+  &--focus {
+  }
+  &--focus::placeholder {
     color: black;
     padding-left: 1rem;
   }
-  &--email::placeholder {
+  &--default::placeholder {
     color: rgba(196, 196, 196, 1);
   }
-  &--phone {
+  &--missing {
     background-color: $red-light;
     &::placeholder {
       padding-left: 1rem;
@@ -49,7 +54,10 @@
     border-radius: 5px;
     background-color: black;
     color: white;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1px;
+  }
+  &--message {
+    margin-top: 2.5rem;
   }
   &--textarea {
     width: 100%;
@@ -114,4 +122,22 @@
 
 .checkbox input[type="checkbox"]:focus + label::before {
   outline: rgb(59, 153, 252) auto 5px;
+}
+
+.dropdown {
+  border: 2px solid black;
+  border-radius: 5px;
+  transition: all 0.6s linear;
+  height: 0px;
+
+  &-choice {
+    padding: 3px 3px 3px 15px;
+  }
+  &-choice:hover {
+    background-color: rgba(196, 196, 196, 1);
+  }
+}
+
+.dropdown-Slidein {
+  height: 100%;
 }
