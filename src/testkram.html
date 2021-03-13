@@ -1,0 +1,47 @@
+<div class="shoppage--product">
+  <div class="shoppage--picture">
+    <img class="shoppage--image" src="${productImages[product.image]}" />
+  </div>
+</div>
+
+<div class="shoppage--product">
+  <div class="shoppage--picture">
+    <picture>
+      <source
+        srcset="${productImages[product.imageLarge]}"
+        media="(min-width:992px)"
+      />
+      <img class="shoppage--image" src="${productImages[product.image]}" />
+    </picture>
+
+    <img
+      class="shoppage--image"
+      src="${productImages[product.image]}"
+      srcset="${productImages[product.imageLarge]} 1024px"
+      sizes="(min-width: 1000px) 1024px"
+    />
+  </div>
+</div>
+
+<div class="shoppage--picture">
+  <picture>
+    <source
+      srcset="${productImages[product.imageLarge]}"
+      media="(min-width:992px)"
+    />
+    <img
+      class="shoppage--image"
+      src="${
+        productImages[product.image]
+      }"
+    />
+  </picture>
+</div>
+
+<picture>
+  <source
+    srcset="/images/gallery/FEND-coffee-machine-desktop.jpg"
+    media="(min-width:992px)"
+  />
+  <img src="/images/gallery/FEND-coffee-machine.jpg" alt="Gebäck" />
+</picture>
